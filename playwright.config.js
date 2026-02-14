@@ -29,17 +29,15 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
-    use: {
-   browserName: 'chromium',
-   headless: false,
-   screenshot: 'only-on-failure',   // Take screenshot only when test fails
-   trace: 'retain-on-failure',      // Optional: keeps trace for debugging
-   video: 'retain-on-failure'       // (Optional) Record video if test fails
- },
+    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */    
+      browserName: 'chromium',
+      headless: false,
+      screenshot: 'only-on-failure',   // Take screenshot only when test fails
+      trace: 'retain-on-failure',      // Optional: keeps trace for debugging
+      video: 'retain-on-failure',       // (Optional) Record video if test fails
+
     launchOptions: {
-      slowMo : 500,
+      slowMo: 500,
     },
   },
 
